@@ -46,17 +46,6 @@
     ])
     map.addLayer(layerBounds)
 
-    // set markers on click events in the map
-    map.on('click', function (event) {
-      // to obtain raster coordinates from the map use `project`
-      var coord = rc.project(event.latlng)
-      // to set a marker, ... in raster coordinates in the map use `unproject`
-      var marker = L.marker(rc.unproject(coord))
-        .addTo(layerBounds)
-      marker.bindPopup('[' + Math.floor(coord.x) + ',' + Math.floor(coord.y) + ']')
-        .openPopup()
-    })
-
     return layerBounds
   }
 

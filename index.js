@@ -26,7 +26,7 @@
     }).addTo(map)
 
     // the tile layer containing the image generated with gdal2tiles --leaflet ...
-    L.tileLayer('./tiles/{z}/{x}/{y}.png', {
+    L.tileLayer('https://rawgithub.com/anthonyblackham/HubbleLegacyField/master/tiles/{z}/{x}/{y}.png', {
       noWrap: true,
       attribution: 'Map <a href="http://hubblesite.org/image/4493/news_release/2019-17' +
         'File:STSCI-H-p1917b-f-20791x19201.tif">' +

@@ -28,11 +28,12 @@
     // the tile layer containing the image generated with gdal2tiles --leaflet ...
     L.tileLayer('https://raw.githubusercontent.com/anthonyblackham/HubbleLegacyField/master/tiles/{z}/{x}/{y}.png', {
       noWrap: true,
-      attribution: 'Map <a href="http://hubblesite.org/image/4493/news_release/2019-17' +
-        'File:STSCI-H-p1917b-f-20791x19201.tif">' +
+      attribution: 'Map <a href="http://hubblesite.org/news_release/news/2019-17' +
         'Hubble Legacy Field</a> under ' +
         '<a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a>'
     }).addTo(map)
+    
+    map.addControl(new L.Control.Fullscreen());
   }
 
   /**
